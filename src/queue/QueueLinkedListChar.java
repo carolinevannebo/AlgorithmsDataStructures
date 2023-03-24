@@ -33,7 +33,7 @@ public class QueueLinkedListChar extends BaseQueueChar {
             System.out.println("Queue is empty.");
             return null;
         }
-        // Save the front element's data, then update the front reference to the next element.
+        // Save the front element's character, then update the front reference to the next element.
         Character dequeuedValue = front.character;
         front = front.next;
         // If the front becomes null, set the rear to null as well (the queue is now empty).
@@ -49,9 +49,9 @@ public class QueueLinkedListChar extends BaseQueueChar {
         // Start with the front element.
         Node current = front;
         System.out.print("\nLinked list Queue content: ");
-        // Iterate through the queue elements, printing each element's data.
+        // Iterate through the queue elements, printing each element's character.
         while (current != null) {
-            System.out.print(current.data + " ");
+            System.out.print(current.character + " ");
             // Move on to the next element in the queue.
             current = current.next;
         }
@@ -61,8 +61,33 @@ public class QueueLinkedListChar extends BaseQueueChar {
 
     // Additional method to dequeue from the rear of the queue
     public Character dequeueRear() {
-        // The same dequeueRear implementation as before
-        return null;
+        // If the queue is empty, print an error message and return null.
+        if (front == null) {
+            System.out.println("Queue is empty.");
+            return null;
+        }
+
+        // If there is only one element in the queue, dequeue it and set front and rear to null.
+        if (front == rear) {
+            Character dequeuedValue = front.character;
+            front = rear = null;
+            return dequeuedValue;
+        }
+
+        // Traverse the linked list to find the second-to-last node.
+        Node secondToLast = front;
+        while (secondToLast.next != rear) {
+            secondToLast = secondToLast.next;
+        }
+
+        // Save the rear element's character, update the second-to-last node's next reference to null,
+        // and update the rear reference to point to the second-to-last node.
+        Character dequeuedValue = rear.character;
+        secondToLast.next = null;
+        rear = secondToLast;
+
+        // Return the dequeued value.
+        return dequeuedValue;
     }
 
 }

@@ -11,7 +11,7 @@ public class Palindrome {
             queue.enqueue(c);
         }
 
-        while (queue.front != null && queue.rear != null) {
+        while (queue.front != queue.rear) {
             // Dequeue the first and last characters and compare them
             if (!queue.dequeue().equals(queue.dequeueRear())) {
                 return false; // If the characters don't match, the word is not a palindrome

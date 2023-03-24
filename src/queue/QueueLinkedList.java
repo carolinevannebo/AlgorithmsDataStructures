@@ -62,4 +62,34 @@ public class QueueLinkedList extends BaseQueue {
         System.out.println();
     }
 
+    public Integer dequeueRear() {
+        // If the queue is empty, print an error message and return null.
+        if (front == null) {
+            System.out.println("Queue is empty.");
+            return null;
+        }
+
+        // If there is only one element in the queue, dequeue it and set front and rear to null.
+        if (front == rear) {
+            int dequeuedValue = front.data;
+            front = rear = null;
+            return dequeuedValue;
+        }
+
+        // Traverse the linked list to find the second-to-last node.
+        Node secondToLast = front;
+        while (secondToLast.next != rear) {
+            secondToLast = secondToLast.next;
+        }
+
+        // Save the rear element's data, update the second-to-last node's next reference to null,
+        // and update the rear reference to point to the second-to-last node.
+        int dequeuedValue = rear.data;
+        secondToLast.next = null;
+        rear = secondToLast;
+
+        // Return the dequeued value.
+        return dequeuedValue;
+    }
+
 }

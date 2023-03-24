@@ -1,8 +1,16 @@
 package queue;
 
+import java.util.LinkedList;
+
 public class Main {
 
     public static void main(String[] args) {
+        HandleLinkedList();
+        HandleArray();
+        HandlePalindrome();
+    }
+
+    public static void HandleLinkedList() {
         // Create a custom queue instance using linked list
         QueueLinkedList queueLinkedList = new QueueLinkedList();
 
@@ -22,7 +30,9 @@ public class Main {
         System.out.println("Dequeued value: " + dequeuedLinkedListValue); // Output: Dequeued value: 1
 
         queueLinkedList.printQueue(); // Output: Queue content: 2 3 4
+    }
 
+    public static void HandleArray() {
         // Create another custom queue instance, now using array
         QueueArray queueArray = new QueueArray(3);
 
@@ -42,7 +52,11 @@ public class Main {
         System.out.println("Dequeued value: " + dequeuedArrayValue);
 
         queueArray.printQueue();
+    }
 
-
+    public static void HandlePalindrome() {
+        String input = "Madam";
+        boolean isPalindrome = Palindrome.isPalindrome(input);
+        System.out.println("\nIs '" + input + "' a palindrome? " + isPalindrome);
     }
 }
