@@ -1,5 +1,6 @@
 package array;
 
+
 public class LinearSearch {
     /*  To search for elements in an array, you can use a simple linear search algorithm.
         This algorithm goes through the array one element at a time and compares the current element with the target element.

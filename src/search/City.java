@@ -1,4 +1,4 @@
-package search.linearSearch;
+package search;
 
 public class City {
     private String cityName;
