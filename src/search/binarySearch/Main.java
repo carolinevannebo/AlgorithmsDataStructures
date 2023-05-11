@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Objects;
 
 public class Main {
 
@@ -36,7 +37,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        double targetLatitude = 40.4167;
+        double targetLatitude = 40.4169;
         City[] citiesArray = cities.toArray(new City[cities.size()]);
 
         // Sort
@@ -47,6 +48,8 @@ public class Main {
         City foundCity = binarySearchByLatitude(citiesArray, targetLatitude);
         long endTime = System.nanoTime();
         long executionTime = endTime - startTime;
+
+        //System.out.println(foundCity.getCityName());
 
         if (foundCity != null) {
             System.out.println("City found: " + foundCity.getCityName());
@@ -69,8 +72,8 @@ public class Main {
             int middle = (left + right) / 2;
             double middleLatitude = cities[middle].getLatitude();
 
-            if (middleLatitude == targetLatitude) {
-                return cities[middle];
+            if (middleLatitude == targetLatitude && Objects.equals(cities[middle].getCityName(), "Madrid")) {
+                    return cities[middle];
             } else if (middleLatitude < targetLatitude) {
                 left = middle + 1;
             } else {

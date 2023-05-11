@@ -33,12 +33,13 @@ public class Main {
             e.printStackTrace();
         }
 
-        double targetLatitude = 40.4167;
+        double targetLatitude = 40.4169;
         City[] citiesArray = cities.toArray(new City[cities.size()]);
 
         // Perform linear search
         long startTime = System.nanoTime();
         City foundCity = linearSearch(citiesArray, targetLatitude);
+
         long endTime = System.nanoTime();
         long executionTime = endTime - startTime;
 
