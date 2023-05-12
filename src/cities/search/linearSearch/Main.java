@@ -1,6 +1,6 @@
-package search.linearSearch;
+package cities.search.linearSearch;
 
-import search.City;
+import cities.City;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        String csvFile = "/Users/carolinevannebo/Desktop/IT/4-semester/AlgDat/oppgaver/Oppgaver/src/worldcities.csv";
+        String csvFile = "/Users/carolinevannebo/Desktop/IT/4-semester/AlgDat/oppgaver/Oppgaver/src/cities/worldcities.csv";
         String line;
         String csvSeparator = ",";
         ArrayList<City> cities = new ArrayList<City>();
@@ -36,7 +36,7 @@ public class Main {
         double targetLatitude = 40.4169;
         City[] citiesArray = cities.toArray(new City[cities.size()]);
 
-        // Perform linear search
+        // Perform linear cities.search
         long startTime = System.nanoTime();
         City foundCity = linearSearch(citiesArray, targetLatitude);
 

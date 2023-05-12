@@ -1,4 +1,4 @@
-package search.binarySearchTree;
+package cities.search.binarySearchTree;
 
 import nodes.TreeNode;
 
@@ -119,7 +119,7 @@ public class Tree<T extends Comparable<T>> {
                 return node.left;
             } else {
                 // nodes with two nodes
-                // search for min number in right sub tree
+                // cities.search for min number in right sub tree
                 T minValue = findMinValue(node.right);
                 node.value = minValue;
                 node.right = delete(node.right, minValue);

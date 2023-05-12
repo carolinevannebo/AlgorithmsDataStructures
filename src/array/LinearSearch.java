@@ -2,7 +2,7 @@ package array;
 
 
 public class LinearSearch {
-    /*  To search for elements in an array, you can use a simple linear search algorithm.
+    /*  To cities.search for elements in an array, you can use a simple linear cities.search algorithm.
         This algorithm goes through the array one element at a time and compares the current element with the target element.
         If the current element matches the target, the algorithm returns the index of the current element.
         If the target element is not found, the algorithm returns -1. */
@@ -46,7 +46,7 @@ public class LinearSearch {
         If a match is found, the index of the current element is returned.
         Otherwise, the loop continues until all elements have been checked. */
 
-    /*  Here's an illustration of how the linear search works for x = 10:
+    /*  Here's an illustration of how the linear cities.search works for x = 10:
         Iteration 1: Compare S[0] (10) with target x (10) -> Match found, return index 0
 
        For y = 84:
@@ -68,7 +68,7 @@ public class LinearSearch {
 
     /** TIME COMPLEXITY
      *
-     *  The time complexity of the linear search algorithm is O(n), where n is the number of elements in the array.
+     *  The time complexity of the linear cities.search algorithm is O(n), where n is the number of elements in the array.
      *  Since we're searching for four elements (x, y, z, and w) independently,
      *  the time complexity for searching all four elements would be O(4n), which is still considered O(n) in big O notation,
      *  as constant factors are usually omitted.

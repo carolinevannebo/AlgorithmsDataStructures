@@ -1,6 +1,6 @@
-package search.binarySearch;
+package cities.search.binarySearch;
 
-import search.City;
+import cities.City;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Main {
 
     public static void main(String[] args) {
-        String csvFile = "/Users/carolinevannebo/Desktop/IT/4-semester/AlgDat/oppgaver/Oppgaver/src/worldcities.csv";
+        String csvFile = "/Users/carolinevannebo/Desktop/IT/4-semester/AlgDat/oppgaver/Oppgaver/src/cities/worldcities.csv";
         String line;
         String csvSeparator = ",";
         ArrayList<City> cities = new ArrayList<>();
@@ -43,7 +43,7 @@ public class Main {
         // Sort
         sortByLatitude(citiesArray);
 
-        // Perform binary search
+        // Perform binary cities.search
         long startTime = System.nanoTime();
         City foundCity = binarySearchByLatitude(citiesArray, targetLatitude);
         long endTime = System.nanoTime();

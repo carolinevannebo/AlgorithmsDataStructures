@@ -1,4 +1,4 @@
-package search.binarySearchTree;
+package cities.search.binarySearchTree;
 
 import nodes.TreeNode;
 

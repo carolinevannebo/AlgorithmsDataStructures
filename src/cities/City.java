@@ -1,4 +1,4 @@
-package search;
+package cities;
 
 public class City {
     private String cityName;
