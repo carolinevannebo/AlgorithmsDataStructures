@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        String csvFile = "/Users/carolinevannebo/Desktop/IT/4-semester/AlgDat/oppgaver/Oppgaver/src/search/worldcities.csv";
+        String csvFile = "/Users/carolinevannebo/Desktop/IT/4-semester/AlgDat/oppgaver/Oppgaver/src/worldcities.csv";
         String line;
         String csvSeparator = ",";
         ArrayList<City> cities = new ArrayList<City>();
