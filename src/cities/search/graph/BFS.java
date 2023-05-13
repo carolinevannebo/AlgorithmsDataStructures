@@ -1,4 +1,4 @@
-package cities.graph;
+package cities.search.graph;
 
 import cities.City;
 
@@ -83,7 +83,7 @@ public class BFS {
 
             try {
                 double latitude = Double.parseDouble(columns[2].replace("\"", "")); // Remove double quotes and parse the latitude
-                String country = columns[5].replace("\"", "");
+                String country = columns[5].replace("\"", ""); // 2 digit country code, could be country name
                 City city = new City(cityName, latitude, country);
 
                 if (cityMap.containsKey(country)) {
