@@ -39,6 +39,13 @@ public class DepthFirstSearchRecursion {
             It marks the current vertex as visited and prints it.
             Then, it iterates through the neighbors of the current vertex.
             If a neighbor hasn't been visited yet, the method calls itself recursively with the neighbor as the new current vertex. */
+
+        /**In the DFSUtil method, the current node is marked as visited and printed.
+         Then, the method is recursively called on all unvisited neighbors.
+         The recursion stack (which is implicitly managed by the system) keeps track of vertices.
+
+         This method is straightforward and reflects the theoretical idea of DFS closely,
+         but it could lead to a stack overflow error for very large graphs because each recursive call adds a layer to the call stack.*/
         void DFSUtil(int vertex, boolean[] visited) {
             visited[vertex] = true;
             System.out.print(vertex + " ");

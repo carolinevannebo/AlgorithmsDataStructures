@@ -23,6 +23,13 @@ public class DepthFirstSearchStack {
 
         /*  The DFS method now initializes an array of boolean values to keep track of visited vertices and a stack to store the vertices to be visited.
             It marks the starting vertex as visited and pushes it onto the stack.*/
+
+        /**The DFS algorithm starts by pushing the start vertex into the stack and marking it as visited.
+         Then, while the stack is not empty, it repeatedly pops a vertex from the top of the stack, prints it,
+         and pushes all its unvisited neighbors onto the stack.
+
+         This method doesn't use recursion, so it's less likely to cause a stack overflow error.
+         This approach can be more efficient in some cases because it avoids the overhead of recursive function calls.*/
         void DFS(int startVertex) {
             boolean[] visited = new boolean[numVertices];
             Stack<Integer> stack = new Stack<>();

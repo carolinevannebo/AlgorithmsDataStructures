@@ -11,6 +11,9 @@ public class BFS {
 
     public static void main(String[] args) {
         String csvFile = "/Users/carolinevannebo/Desktop/IT/4-semester/AlgDat/oppgaver/Oppgaver/src/cities/worldcities.csv";
+        /** Although HashMap is not a type of Graph, it can be used to represent a graph.
+            In this case, I'm using HashMap where each key is a node in the graph, and its value is a list of
+            all the nodes it's connected to. This is an adjacency list representation of a graph.*/
         HashMap<String, ArrayList<City>> cities;
 
         try {
