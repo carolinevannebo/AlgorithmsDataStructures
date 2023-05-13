@@ -1,4 +1,4 @@
-package cities.search;
+package cities.search.graph;
 
 import java.util.*;
 
